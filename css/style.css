@@ -1,0 +1,495 @@
+@font-face {
+  font-family: 'Future Academic';
+  src: url("../fonts/futurademic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Suicce Intl Thin';
+  src: url("../fonts/SuisseIntl-Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Suicce Intl Light';
+  src: url("../fonts/SuisseIntl-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Suicce Intl Regular';
+  src: url("../fonts/SuisseIntl-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Suicce Intl Book';
+  src: url("../fonts/SuisseIntl-Book.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.main {
+  background-color: #000000;
+  font-family: "Suicce Intl Thin", sans-serif;
+  color: #FFFFFF;
+}
+
+.main-title {
+  margin: 0;
+  margin-left: 20px;
+  font-size: 3.2rem;
+  letter-spacing: 0.6rem;
+  line-height: 1.3;
+}
+
+.main-arrow {
+  padding: 8rem 0;
+  margin-left: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 11rem;
+}
+
+.header-menu {
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #000000;
+  padding: 0.6rem;
+  padding-top: 50px;
+}
+
+.header-nav {
+  padding-left: 18px;
+  margin-bottom: 90px;
+}
+
+.header-nav__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.header-nav__item {
+  font-size: 25px;
+  margin-bottom: 35px;
+}
+
+.header-contacts {
+  padding-left: 6px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.header-contacts__item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.header-contacts__icon {
+  margin-right: 15px;
+}
+
+.header-social {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+  padding: 8px;
+  font-size: 18px;
+}
+
+.menu__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 101;
+}
+
+.contacts {
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #000000;
+  font-family: "Suicce Intl Thin", sans-serif;
+  color: #FFFFFF;
+  padding: 0.6rem;
+}
+
+.contacts-title {
+  padding-left: 18px;
+  font-size: 4rem;
+  margin: 0;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.contacts-social {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 50px auto;
+  padding-left: 18px;
+  font-size: 32px;
+}
+
+.contacts-social__item {
+  margin-bottom: 28px;
+}
+
+.contacts-map {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 50%;
+  background: url("../img/map.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.request {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #000000;
+  font-family: "Suicce Intl Thin", sans-serif;
+  color: #FFFFFF;
+  padding: 0.6rem;
+}
+
+.request-title {
+  padding-left: 18px;
+  font-size: 4rem;
+  margin: 0;
+  margin-top: 90px;
+  margin-bottom: 40px;
+}
+
+.request-form {
+  padding: 18px;
+}
+
+.request-form__input {
+  width: 100%;
+  margin: 10px auto;
+  padding: 16px 8px;
+  background-color: transparent;
+  border-bottom: 1px solid #707070;
+  color: #FFFFFF;
+}
+
+.request-form input::-webkit-outer-spin-button,
+.request-form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.request-form__btn {
+  width: 100%;
+  margin-top: 32px;
+  padding: 16px 8px;
+  text-align: center;
+  background-color: #0F1215;
+  color: #FFFFFF;
+  border-radius: 3px;
+}
+
+.brief {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #000000;
+  font-family: "Suicce Intl Light", sans-serif;
+  color: #FFFFFF;
+  padding: 0.6rem 80px;
+}
+
+.brief-title {
+  font-family: "Suicce Intl Thin", sans-serif;
+  font-size: 4rem;
+  margin: 0;
+  margin-top: 90px;
+  margin-bottom: 40px;
+}
+
+.brief-tabs {
+  margin: 90px auto;
+}
+
+.brief-tabs__item {
+  margin-right: 50px;
+  padding-bottom: 15px;
+  font-size: 24px;
+  color: #707070;
+}
+
+.brief-tabs__item_active {
+  border-bottom: 1px solid #707070;
+  color: #FFFFFF;
+}
+
+.brief-col {
+  display: inline-flex;
+  width: 350px;
+  margin-right: 100px;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.brief-col label {
+  margin-bottom: 30px;
+  color: #707070;
+}
+
+.brief-col label input {
+  margin-right: 16px;
+}
+
+.brief-col__title {
+  font-size: 24px;
+  padding-bottom: 30px;
+}
+
+.brief input[type="number"], .brief input[type="text"], .brief input[type="date"] {
+  padding: 16px 8px;
+  background-color: transparent;
+  border-bottom: 1px solid #707070;
+  color: #FFFFFF;
+}
+
+.brief input::-webkit-outer-spin-button,
+.brief input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.brief-form__footer {
+  content: '';
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  padding-left: 80px;
+  background-color: #1B1B1F;
+}
+
+.brief-form__input {
+  width: 350px;
+  margin-right: 100px;
+}
+
+.brief-form__btn {
+  width: 350px;
+  margin-right: 100px;
+  padding: 16px 8px;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #707070;
+  color: #FFFFFF;
+  border-radius: 3px;
+}
+
+.bottom-blur {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  z-index: 99;
+}
+
+.parallax {
+  position: relative;
+  background: url("../img/parallax-bg.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 180px;
+  z-index: 1;
+}
+
+.parallax:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.visible-lg, .visible-md, .visible-sm {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  html {
+    font-size: 12px;
+  }
+  .container {
+    max-width: 540px;
+  }
+  .row {
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .xs-only {
+    display: none;
+  }
+  .visible-sm {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .container {
+    max-width: 720px;
+  }
+  .hidden-md {
+    display: none;
+  }
+  .visible-md {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 16px;
+  }
+  .hidden-lg {
+    display: none;
+  }
+  .visible-lg {
+    display: block;
+  }
+  .container {
+    max-width: 960px;
+  }
+  .header-logo {
+    width: 40%;
+  }
+  .header-nav__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-nav__item {
+    font-family: "Suicce Intl Regular", sans-serif;
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+  .main-title, .main-arrow {
+    margin-left: 80px;
+  }
+  .contacts {
+    height: 100vh;
+    padding-left: 100px;
+  }
+  .contacts-title {
+    margin-top: 120px;
+    margin-bottom: 90px;
+  }
+  .contacts-social {
+    margin: 90px auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  .header-logo {
+    width: 25%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

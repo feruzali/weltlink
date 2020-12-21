@@ -1,0 +1,109 @@
+.visible-lg, .visible-md, .visible-sm {
+	display: none;
+}
+
+@media (min-width: 576px) {
+	html {
+		font-size: 12px;
+	}
+
+	.container {
+		max-width: 540px;
+	}
+
+	.row {
+		padding: 0;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: baseline;
+	}
+
+	.xs-only {
+		display: none;
+	}
+	.visible-sm {
+		display: block;
+	}
+}
+
+@media (min-width: 768px) {
+	html {
+		font-size: 14px;
+	}
+
+	.container {
+		max-width: 720px;
+	}
+
+	.hidden-md {
+		display: none;	
+	}
+	.visible-md {
+		display: block;
+	}	
+}
+
+@media (min-width: 992px) {
+	html {
+		font-size: 16px;
+	}
+
+	.hidden-lg {
+		display: none;
+	}
+	.visible-lg {
+		display: block;
+	}
+
+	.container {
+		max-width: 960px;
+	}
+
+	.header {
+		&-logo {
+			width: 40%;
+		}
+		&-nav {
+			&__wrapper {
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+			}
+			&__item {
+				font-family: $suicce-reg;
+				font-size: 12px;
+				margin-bottom: 0;
+				margin-right: 30px;
+			}
+		}
+	}
+	.main {
+		&-title, &-arrow {
+			margin-left: 80px;
+		}
+	}
+	.contacts {
+		height: 100vh;
+		padding-left: 100px;
+		&-title {
+			margin-top: 120px;
+			margin-bottom: 90px;
+		}
+		&-social {
+			margin: 90px auto;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1140px;
+	}
+	.header {
+		&-logo {
+			width: 25%;
+		}
+	}
+	
+}

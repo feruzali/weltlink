@@ -1,0 +1,41 @@
+html {
+	font-size: 10px;
+	line-height: 1.2;	
+}
+
+body {
+	font-family: Montserrat, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+button,
+input {
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+a {
+	color: inherit;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
