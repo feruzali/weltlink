@@ -8,7 +8,7 @@
 .section-title {
     margin: 0;
     font-size: 64px;
-    letter-spacing: 3px;
+    letter-spacing: 0.048em;
     font-family: $suicce-thin;
     color: $white;
 }
@@ -101,8 +101,8 @@
 
 .menu__close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 16px;
+    right: 6px;
     z-index: 101;
     &:hover {
         cursor: pointer;
@@ -378,18 +378,20 @@
         z-index: 5;
         &__title {
             font-size: 40px;
-            letter-spacing: 2px;
+            letter-spacing: 0.048em;
         }
         &__list {
             margin: 32px auto;
             font-family: $suicce-light;
             font-size: 16px;
+            letter-spacing: 0.048em;
             li {
-                margin: 12px auto;
+                margin: 17px auto;
             }
         }
         &:hover {
             background:  url('../img/skills-bg.png') center center no-repeat;
+            transition: all .5s;
         }
         &:hover .skill-col__overlay{
             width: 100%;
@@ -443,6 +445,7 @@
             margin-right: 10px;
             font-family: $suicce-light;
             font-size: 32px;
+            letter-spacing: 0.048em;
             text-transform: uppercase;
             color: $white;
             overflow: hidden;
@@ -466,6 +469,7 @@
 
         &:hover {
             background: url('../img/blog-bg.png')  right 30px no-repeat;
+            transition: all .5s;
         }
         &:hover .blog-col__overlay{
             background-color: rgba(0, 0, 0, .6);
@@ -482,20 +486,21 @@
         &__title {
             font-size: 25px;
             line-height: 1.4;
+            letter-spacing: 0.048em;
         }
         &__desc {
             margin-top: 32px;
             margin-bottom: 24px;
             font-size: 15px;
             line-height: 1.6;
-            letter-spacing: 2px;
+            letter-spacing: 0.048em;
         }
         &__date {
             font-family: $suicce-reg;
             font-size: 12px;
             text-transform: uppercase;
             color: #7E808D;
-            letter-spacing: 2px;
+            letter-spacing: 0.256em;
         }
     }
 }
@@ -519,6 +524,7 @@
     align-items: center;
     text-align: center;
     padding: 50px;
+    padding-bottom: 120px;
     background-color: $black;
     color: $white;
     font-family: $suicce-thin;

@@ -180,6 +180,9 @@
 			max-width: 380px;
 			margin: 0;
 			padding: 80px 10px 80px 0;
+			&__list {
+				font-size: 18px;
+			}
 		}
 	}
 	.blog {
@@ -207,6 +210,12 @@
 				font-family: $suicce-reg;
 				font-size: 32px;
 			}
+			&__desc {
+				font-size: 18px;
+			}
+			&__date {
+				font-size: 15px;
+			}
 			&__content {
 				max-width: 40%;
 			}
@@ -216,6 +225,14 @@
 			&:hover {
 				background-position: 45% top;
 			}
+		}
+	}
+
+	.footer {
+		padding-top: 90px;
+		padding-bottom: 50px;
+		p {
+			margin: 0;
 		}
 	}
 }

@@ -483,7 +483,7 @@ html(lang='en')
 
 
         //- .bottom-blur 
-        #map
+        //- #map(style="height: 1300px;")
 
         footer.footer 
             p &copy; 2020 Weltlink LLC.
@@ -496,4 +496,4 @@ html(lang='en')
     script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js")
     script(src="./js/script.js")
 
-    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUZJyxmjUoy8jTLrudaselX7Sro4XodyU&map_ids=2667e61fd48304dc&callback=initMap")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUZJyxmjUoy8jTLrudaselX7Sro4XodyU&map_ids=2667e61fd48304dc&callback=initMap" defer)
