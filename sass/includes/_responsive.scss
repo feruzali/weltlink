@@ -25,6 +25,26 @@
 	.visible-sm {
 		display: block;
 	}
+
+	.works {
+		display: flex;
+		flex-wrap: wrap;
+		&-col {	
+			height: auto;
+		}
+		&-content {
+			justify-content: space-around;
+		}
+	}
+	
+	.blog {
+		&-col {
+			margin-top: 20px;
+			&:hover {
+				background-position: center center;
+			}
+		}
+	}
 }
 
 @media (min-width: 768px) {
@@ -41,7 +61,33 @@
 	}
 	.visible-md {
 		display: block;
+	}
+
+	.projects {
+		&-slider {
+			&__title {
+				max-width: 400px;
+			}
+			.slick-dots button{
+				width: 50px;
+				height: 4px;
+			}
+			.slick-dots li.slick-active button{
+				height: 8px;
+			}
+		}
+	}
+
+	.works {
+		&-col {
+			width: 50%;
+		}
 	}	
+
+	.skills-col {
+		width: 50%;
+		margin: 0 auto;
+	}
 }
 
 @media (min-width: 992px) {
@@ -60,7 +106,12 @@
 		max-width: 960px;
 	}
 
+	.brief {
+		display: block;
+	}
+
 	.header {
+		padding: 35px 30px;
 		&-logo {
 			width: 40%;
 		}
@@ -72,7 +123,8 @@
 			}
 			&__item {
 				font-family: $suicce-reg;
-				font-size: 12px;
+				font-size: 14px;
+				letter-spacing: 4px;
 				margin-bottom: 0;
 				margin-right: 30px;
 			}
@@ -86,12 +138,84 @@
 	.contacts {
 		height: 100vh;
 		padding-left: 100px;
+		transform: translateX(0);
+		transform: translateY(-100%);
 		&-title {
 			margin-top: 120px;
 			margin-bottom: 90px;
 		}
 		&-social {
 			margin: 90px auto;
+		}
+	}
+
+	.projects {
+		padding: 200px 0;
+		&-slider {
+			margin-left: 80px;	
+			padding-left: 0;
+			.slick-dots {
+				left: -10px;
+			}
+		}
+	}
+
+	.works {
+		&-content {
+			&__title {
+				width: 70%;
+			}
+		}
+		&-col {
+			width: 33.3333%;
+		}
+	}
+	.skills {
+		padding-left: 80px;
+		&-row {
+			display: flex;
+			justify-content: space-between;
+		}
+		&-col {
+			max-width: 380px;
+			margin: 0;
+			padding: 80px 10px 80px 0;
+		}
+	}
+	.blog {
+		position: relative;
+		padding-left: 80px;
+		padding-right: 80px;
+		&-link {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 200px;
+			position: absolute;
+			top: 100px;
+			right: 80px;
+			font-family: $suicce-light;
+			font-size: 20px;
+		}
+		&-col {
+			margin-top: 40px;
+			display: flex;
+			justify-content: space-between;
+			min-height: 380px;
+			&__title {
+				max-width: 30%;
+				font-family: $suicce-reg;
+				font-size: 32px;
+			}
+			&__content {
+				max-width: 40%;
+			}
+			&__link {
+				align-self: center;
+			}
+			&:hover {
+				background-position: 45% top;
+			}
 		}
 	}
 }
@@ -104,6 +228,26 @@
 		&-logo {
 			width: 25%;
 		}
+		&-nav {
+			&__item {
+				font-size: 16px;
+				letter-spacing: 6px;
+			}
+		}
 	}
-	
+		
+}
+
+@media (min-width: 1400px) {
+	.brief {
+		padding: 0.6rem 80px;
+		&-col {
+			padding: 0 50px;
+		}
+		&-form {
+			&__footer {
+				padding: 0 80px;
+			}
+		}
+	}
 }

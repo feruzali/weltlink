@@ -8,26 +8,26 @@ html(lang='en')
     body
         main#main.main
             header#header.header
-                .header-logo
+                a(href="#").header-logo
                     img(src="./img/logo.png", alt="logo")
                 
                 .header-nav_middle.visible-lg 
                     ul.header-nav__wrapper
                         li.header-nav__item  
-                            a Мобилки
+                            a(href="#") Мобилки
                         li.header-nav__item 
-                            a Вебка
+                            a(href="#") Вебка
                         li.header-nav__item  
-                            a Диджитал
+                            a(href="#") Диджитал
 
                 .header-nav_right.visible-lg
                     ul.header-nav__wrapper
                         li.header-nav__item  
-                            a Блог
-                        li.header-nav__item 
-                            a Бриф
-                        li.header-nav__item  
-                            a Контакты
+                            a(href="#") Блог
+                        li.header-nav__item#open-brief 
+                            a(href="#") Бриф
+                        li.header-nav__item#open-contacts
+                            a(href="#") Контакты
 
                 #open-menu.header-menu__open.hidden-lg
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
@@ -40,17 +40,18 @@ html(lang='en')
             
             h1.main-title Мы создаем <br/> уникальность
             .main-arrow
-                <svg xmlns="http://www.w3.org/2000/svg" width="112" height="112.589" viewBox="0 0 112 112.589">
-                <g id="Button" transform="translate(127.824 -224) rotate(90)">
-                    <rect id="Background" width="112" height="112" transform="translate(224 15.824)" fill="rgba(255,255,255,0)"/>
-                    <g id="Сгруппировать_25" data-name="Сгруппировать 25" transform="translate(224 27.394)">
-                    <line id="Линия_10" data-name="Линия 10" x2="112" transform="translate(0 44.43)" fill="none" stroke="#fff" stroke-width="2"/>
-                    <path id="Контур_72" data-name="Контур 72" d="M0,0,44.636,44.636,0,89.271" transform="translate(66.953 0)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2"/>
+                a(href="#projects" aria-label="Scroll down")
+                    <svg xmlns="http://www.w3.org/2000/svg" width="112" height="112.589" viewBox="0 0 112 112.589">
+                    <g id="Button" transform="translate(127.824 -224) rotate(90)">
+                        <rect id="Background" width="112" height="112" transform="translate(224 15.824)" fill="rgba(255,255,255,0)"/>
+                        <g id="Сгруппировать_25" data-name="Сгруппировать 25" transform="translate(224 27.394)">
+                        <line id="Линия_10" data-name="Линия 10" x2="112" transform="translate(0 44.43)" fill="none" stroke="#fff" stroke-width="2"/>
+                        <path id="Контур_72" data-name="Контур 72" d="M0,0,44.636,44.636,0,89.271" transform="translate(66.953 0)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2"/>
+                        </g>
                     </g>
-                </g>
-                </svg>
+                    </svg>
 
-            .header-menu
+            .header-menu#header-menu
                 #close-menu.menu__close
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                     <g id="Button" transform="translate(-224 -32)">
@@ -68,15 +69,17 @@ html(lang='en')
                 nav.header-nav  
                     ul.header-nav__wrapper
                         li.header-nav__item  
-                            a Мобилки
+                            a(href="#") Мобилки
                         li.header-nav__item 
-                            a Вебка
+                            a(href="#") Вебка
                         li.header-nav__item  
-                            a Диджитал
+                            a(href="#") Диджитал
                         li.header-nav__item  
-                            a Блог
+                            a(href="#") Блог
                         li.header-nav__item  
-                            a Бриф
+                            a(href="#") Бриф
+                        li.header-nav__item#open-contacts_xs  
+                            a(href="#") Контакты
                 
                 .header-contacts
                     .header-contacts__item  
@@ -108,12 +111,12 @@ html(lang='en')
                         span 1921 Bel Air Rd, Los Angeles, CA 90077
                 
                 .header-social  
-                    span.header-social__item Facebook
-                    span.header-social__item Instagram
-                    span.header-social__item Telegram
+                    a(href="#").header-social__item Facebook
+                    a(href="#").header-social__item Instagram
+                    a(href="#").header-social__item Telegram
 
 
-        section.contacts
+        section.contacts#contacts
             .menu__close
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                 <g id="Button" transform="translate(-224 -32)">
@@ -158,11 +161,11 @@ html(lang='en')
                         </svg>
                     span 1921 Bel Air Rd, Los Angeles, CA 90077
             .contacts-social  
-                span.contacts-social__item Facebook
-                span.contacts-social__item Instagram
-                span.contacts-social__item Telegram
+                a(href="#").contacts-social__item Facebook
+                a(href="#").contacts-social__item Instagram
+                a(href="#").contacts-social__item Telegram
             
-            .contacts-map.visible-lg    
+            .contacts-map.visible-lg   
                 
 
         section.request
@@ -187,7 +190,7 @@ html(lang='en')
                 button.request-form__btn(type="submit") Отправить
 
       
-        section.brief
+        section.brief#brief
             .menu__close
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                 <g id="Button" transform="translate(-224 -32)">
@@ -251,19 +254,246 @@ html(lang='en')
                             | К дате
                         input(type="date" name="deadline") 
                     
-                    .brief-form__footer 
-                        input.brief-form__input(type="text" placeholder="Имя/название компании")
-                        input.brief-form__input(type="number" placeholder="Номер телефона")
-                        button.brief-form__btn(type="submit") Отправить
+                    .brief-form__footer
+                        .brief-col 
+                            input(type="text" placeholder="Имя/название компании")
+                        .brief-col 
+                            input(type="number" placeholder="Номер телефона")
+                        .brief-col 
+                            button.brief-form__btn(type="submit") Отправить
                             
-                        
+        section.projects#projects   
+            .projects-slider
+                .projects-slider__item
+                    img(src="./img/projects/1.png", alt="Project logo")
+                    h3.projects-slider__title Краудфандинговая платформа
+                    a(href="#" aria-label="Read more")
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80.206" height="80" viewBox="0 0 80.206 80">
+                        <g id="Button" transform="translate(-224 -15.824)">
+                            <rect id="Background" width="80" height="80" transform="translate(224 15.824)" fill="rgba(255,255,255,0)"/>
+                            <g id="Сгруппировать_25" data-name="Сгруппировать 25" transform="translate(224 24.088)">
+                            <line id="Линия_10" data-name="Линия 10" x2="80" transform="translate(0 31.736)" fill="none" stroke="#fff" stroke-width="1"/>
+                            <path id="Контур_72" data-name="Контур 72" d="M0,0,31.883,31.883,0,63.765" transform="translate(47.824 0)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+                            </g>
+                        </g>
+                        </svg>
+                .projects-slider__item
+                    img(src="./img/projects/1.png", alt="Project logo")
+                    h3.projects-slider__title Краудфандинговая платформа
+                    a(href="#" aria-label="Read more")
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80.206" height="80" viewBox="0 0 80.206 80">
+                        <g id="Button" transform="translate(-224 -15.824)">
+                            <rect id="Background" width="80" height="80" transform="translate(224 15.824)" fill="rgba(255,255,255,0)"/>
+                            <g id="Сгруппировать_25" data-name="Сгруппировать 25" transform="translate(224 24.088)">
+                            <line id="Линия_10" data-name="Линия 10" x2="80" transform="translate(0 31.736)" fill="none" stroke="#fff" stroke-width="1"/>
+                            <path id="Контур_72" data-name="Контур 72" d="M0,0,31.883,31.883,0,63.765" transform="translate(47.824 0)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+                            </g>
+                        </g>
+                        </svg>
+                .projects-slider__item
+                    img(src="./img/projects/1.png", alt="Project logo")
+                    h3.projects-slider__title Краудфандинговая платформа
+                    a(href="#" aria-label="Read more")
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80.206" height="80" viewBox="0 0 80.206 80">
+                        <g id="Button" transform="translate(-224 -15.824)">
+                            <rect id="Background" width="80" height="80" transform="translate(224 15.824)" fill="rgba(255,255,255,0)"/>
+                            <g id="Сгруппировать_25" data-name="Сгруппировать 25" transform="translate(224 24.088)">
+                            <line id="Линия_10" data-name="Линия 10" x2="80" transform="translate(0 31.736)" fill="none" stroke="#fff" stroke-width="1"/>
+                            <path id="Контур_72" data-name="Контур 72" d="M0,0,31.883,31.883,0,63.765" transform="translate(47.824 0)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+                            </g>
+                        </g>
+                        </svg>
+                .projects-slider__item
+                    img(src="./img/projects/1.png", alt="Project logo")
+                    h3.projects-slider__title Краудфандинговая платформа
+                    a(href="#" aria-label="Read more")
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80.206" height="80" viewBox="0 0 80.206 80">
+                        <g id="Button" transform="translate(-224 -15.824)">
+                            <rect id="Background" width="80" height="80" transform="translate(224 15.824)" fill="rgba(255,255,255,0)"/>
+                            <g id="Сгруппировать_25" data-name="Сгруппировать 25" transform="translate(224 24.088)">
+                            <line id="Линия_10" data-name="Линия 10" x2="80" transform="translate(0 31.736)" fill="none" stroke="#fff" stroke-width="1"/>
+                            <path id="Контур_72" data-name="Контур 72" d="M0,0,31.883,31.883,0,63.765" transform="translate(47.824 0)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+                            </g>
+                        </g>
+                        </svg>
+                .projects-slider__item
+                    img(src="./img/projects/1.png", alt="Project logo")
+                    h3.projects-slider__title Краудфандинговая платформа
+                    a(href="#" aria-label="Read more")
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80.206" height="80" viewBox="0 0 80.206 80">
+                        <g id="Button" transform="translate(-224 -15.824)">
+                            <rect id="Background" width="80" height="80" transform="translate(224 15.824)" fill="rgba(255,255,255,0)"/>
+                            <g id="Сгруппировать_25" data-name="Сгруппировать 25" transform="translate(224 24.088)">
+                            <line id="Линия_10" data-name="Линия 10" x2="80" transform="translate(0 31.736)" fill="none" stroke="#fff" stroke-width="1"/>
+                            <path id="Контур_72" data-name="Контур 72" d="M0,0,31.883,31.883,0,63.765" transform="translate(47.824 0)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+                            </g>
+                        </g>
+                        </svg>
+
+        section.skills  
+            h2.section-title Скилы
+            .skills-row
+                .skills-col
+                    .skill-col__overlay
+                    h3.skills-col__title Мобилка
+                    ul.skills-col__list 
+                        li Концепция продукта
+                        li Дизайн интерфейса
+                        li Нативная техническая реализация
+                        li Запуск продукта
+                    a(href="#" aria-label="Read more")
+                        <svg xmlns="http://www.w3.org/2000/svg" width="65.713" height="33" viewBox="0 0 65.713 33">
+                        <g id="Button" transform="translate(0 0)" opacity="0.64">
+                            <rect id="Background" width="32" height="33" transform="translate(33 0)" fill="rgba(255,255,255,0)"/>
+                            <g id="Сгруппировать_25" data-name="Сгруппировать 25" transform="translate(0 3.374)">
+                            <line id="Линия_10" data-name="Линия 10" x2="65" transform="translate(0 12.625)" fill="none" stroke="#fff" stroke-width="1"/>
+                            <path id="Контур_72" data-name="Контур 72" d="M0,0,13.019,13.019,0,26.037" transform="translate(52.195 0)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+                            </g>
+                        </g>
+                        </svg>
+                .skills-col
+                    .skill-col__overlay
+                    h3.skills-col__title Вебка
+                    ul.skills-col__list 
+                        li Исследования и аналитика
+                        li Дизайн интерфейса
+                        li Front-end и back-end разработка
+                        li Техническая и дизайн поддержка
+                    a(href="#" aria-label="Read more")
+                        <svg xmlns="http://www.w3.org/2000/svg" width="65.713" height="33" viewBox="0 0 65.713 33">
+                        <g id="Button" transform="translate(0 0)" opacity="0.64">
+                            <rect id="Background" width="32" height="33" transform="translate(33 0)" fill="rgba(255,255,255,0)"/>
+                            <g id="Сгруппировать_25" data-name="Сгруппировать 25" transform="translate(0 3.374)">
+                            <line id="Линия_10" data-name="Линия 10" x2="65" transform="translate(0 12.625)" fill="none" stroke="#fff" stroke-width="1"/>
+                            <path id="Контур_72" data-name="Контур 72" d="M0,0,13.019,13.019,0,26.037" transform="translate(52.195 0)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+                            </g>
+                        </g>
+                        </svg>
+                .skills-col
+                    .skill-col__overlay
+                    h3.skills-col__title Диджитал
+                    ul.skills-col__list 
+                        li Концепция продукта
+                        li Дизайн интерфейса
+                        li Нативная техническая реализация
+                        li Запуск продукта
+                    a(href="#" aria-label="Read more")
+                        <svg xmlns="http://www.w3.org/2000/svg" width="65.713" height="33" viewBox="0 0 65.713 33">
+                        <g id="Button" transform="translate(0 0)" opacity="0.64">
+                            <rect id="Background" width="32" height="33" transform="translate(33 0)" fill="rgba(255,255,255,0)"/>
+                            <g id="Сгруппировать_25" data-name="Сгруппировать 25" transform="translate(0 3.374)">
+                            <line id="Линия_10" data-name="Линия 10" x2="65" transform="translate(0 12.625)" fill="none" stroke="#fff" stroke-width="1"/>
+                            <path id="Контур_72" data-name="Контур 72" d="M0,0,13.019,13.019,0,26.037" transform="translate(52.195 0)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+                            </g>
+                        </g>
+                        </svg>
 
 
 
-        .bottom-blur 
+        section.works
+            - const bgs = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            for bg in bgs
 
-        .parallax   
+                .works-col
+                    img.works__img(src=`${"../img/works/"+ bg + ".jpg"}`, alt="Work preview")
+                    .works-content
+                        h3.works-content__title Tidal App
+                        a(href="#" aria-label="Read more")
+                            <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+                            <g id="Mouse" transform="translate(-768 -2800)">
+                                <g id="Эллипс_14" data-name="Эллипс 14" transform="translate(768 2800)" fill="rgba(255,255,255,0)" stroke="#fff" stroke-width="1" opacity="0.24">
+                                <circle cx="64" cy="64" r="64" stroke="none"/>
+                                <circle cx="64" cy="64" r="63.5" fill="none"/>
+                                </g>
+                                <g id="Button" transform="translate(770.667 2844)">
+                                <rect id="Background" width="43" height="43" transform="translate(42.333 0)" fill="rgba(255,255,255,0)"/>
+                                <g id="Сгруппировать_25" data-name="Сгруппировать 25" transform="translate(0 4.408)">
+                                    <line id="Линия_10" data-name="Линия 10" x2="48" transform="translate(37.333 16.593)" fill="none" stroke="#fff" stroke-width="1"/>
+                                    <path id="Контур_72" data-name="Контур 72" d="M0,0,17,17l-17,17" transform="translate(68.173 0)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+                                </g>
+                                </g>
+                            </g>
+                            </svg>      
+               
+        section.blog
+            h2.section-title Блог
+            a.blog-link.visible-lg 
+                span Перейти в блог
+                <svg xmlns="http://www.w3.org/2000/svg" width="32.383" height="32" viewBox="0 0 32.383 32">
+                <g id="Button" transform="translate(-224 -15.824)" opacity="0.64">
+                    <rect id="Background" width="32" height="32" transform="translate(224 15.824)" fill="rgba(255,255,255,0)"/>
+                    <g id="Сгруппировать_25" data-name="Сгруппировать 25" transform="translate(224 19.13)">
+                    <line id="Линия_10" data-name="Линия 10" x2="32" transform="translate(0 12.694)" fill="none" stroke="#fff" stroke-width="1"/>
+                    <path id="Контур_72" data-name="Контур 72" d="M0,0,12.753,12.753,0,25.506" transform="translate(19.13 0)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+                    </g>
+                </g>
+                </svg>
+
+
+            .blog-col 
+                .blog-col__overlay
+                h3.blog-col__title Similique sunt in culpa qui officia deserunt mollitia animi expedita soluta
+                .blog-col__content
+                    p.blog-col__desc Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    small.blog-col__date 19 Dec 2020 / code / mobile
+                a.blog-col__link.visible-lg(href="#" aria-label="Read more")
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <g id="Button" transform="translate(-224 -15.824)" opacity="0.64">
+                        <rect id="Background" width="48" height="48" transform="translate(224 15.824)" fill="rgba(255,255,255,0)"/>
+                        <g id="Сгруппировать_25" data-name="Сгруппировать 25" transform="translate(224 15.824)">
+                        <line id="Линия_10" data-name="Линия 10" x2="48" transform="translate(0 24)" fill="none" stroke="#fff" stroke-width="1"/>
+                        <path id="Контур_72" data-name="Контур 72" d="M-6.259-6.611v48" transform="translate(30.259 6.611)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+                        </g>
+                    </g>
+                    </svg>
+
+            .blog-col 
+                .blog-col__overlay
+                h3.blog-col__title Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+                .blog-col__content
+                    p.blog-col__desc Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    small.blog-col__date 15 Dec 2020 / marketing
+                a.blog-col__link.visible-lg(href="#" aria-label="Read more")
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <g id="Button" transform="translate(-224 -15.824)" opacity="0.64">
+                        <rect id="Background" width="48" height="48" transform="translate(224 15.824)" fill="rgba(255,255,255,0)"/>
+                        <g id="Сгруппировать_25" data-name="Сгруппировать 25" transform="translate(224 15.824)">
+                        <line id="Линия_10" data-name="Линия 10" x2="48" transform="translate(0 24)" fill="none" stroke="#fff" stroke-width="1"/>
+                        <path id="Контур_72" data-name="Контур 72" d="M-6.259-6.611v48" transform="translate(30.259 6.611)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+                        </g>
+                    </g>
+                    </svg>
+            .blog-col 
+                .blog-col__overlay
+                h3.blog-col__title Neque porro quisquam est, qui dolorem ipsum quia dolor
+                .blog-col__content
+                    p.blog-col__desc Omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                    small.blog-col__date 12 Dec 2020 / seo
+                a.blog-col__link.visible-lg(href="#" aria-label="Read more")
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <g id="Button" transform="translate(-224 -15.824)" opacity="0.64">
+                        <rect id="Background" width="48" height="48" transform="translate(224 15.824)" fill="rgba(255,255,255,0)"/>
+                        <g id="Сгруппировать_25" data-name="Сгруппировать 25" transform="translate(224 15.824)">
+                        <line id="Линия_10" data-name="Линия 10" x2="48" transform="translate(0 24)" fill="none" stroke="#fff" stroke-width="1"/>
+                        <path id="Контур_72" data-name="Контур 72" d="M-6.259-6.611v48" transform="translate(30.259 6.611)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+                        </g>
+                    </g>
+                    </svg>
+
+
+
+        //- .bottom-blur 
+        #map
+
+        footer.footer 
+            p &copy; 2020 Weltlink LLC.
+
+           
     
+    
+    script(src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous")
+    script(type="text/javascript" src="./js/slick.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js")
     script(src="./js/script.js")
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUZJyxmjUoy8jTLrudaselX7Sro4XodyU&map_ids=2667e61fd48304dc&callback=initMap")

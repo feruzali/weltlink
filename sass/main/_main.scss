@@ -5,6 +5,13 @@
 	padding-right: 15px;
 }
 
+.section-title {
+    margin: 0;
+    font-size: 64px;
+    letter-spacing: 3px;
+    font-family: $suicce-thin;
+    color: $white;
+}
 
 .main {
     background-color: $black;
@@ -30,9 +37,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    padding-top: 25px;
     margin-bottom: 11rem;
     &-menu {
-        display: none;
         width: 100%;
         min-height: 100vh;
         position: absolute;
@@ -42,6 +49,8 @@
         background-color: $black;
         padding: 0.6rem;
         padding-top: 50px;
+        transform: translateY(-100%);
+        letter-spacing: 3px;
     }
     
 
@@ -71,6 +80,7 @@
             display: flex;
             align-items: center;
             font-size: 14px;
+            letter-spacing: 2px;
             margin-bottom: 16px;
         }
 
@@ -85,6 +95,7 @@
         margin: 50px auto;
         padding: 8px;
         font-size: 18px;
+        letter-spacing: 2px;
     }
 }
 
@@ -93,10 +104,12 @@
     top: 10px;
     right: 10px;
     z-index: 101;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .contacts {
-    display: none;
     width: 100%;
     min-height: 100vh;
     position: absolute;
@@ -107,6 +120,7 @@
     font-family: $suicce-thin;
     color: $white;
     padding: 0.6rem;
+    transform: translateX(-100%);
     &-title {
         padding-left: 18px;
         font-size: 4rem;
@@ -194,7 +208,8 @@
     background-color: $black;
     font-family: $suicce-light;
     color: $white;
-    padding: 0.6rem 80px;
+    padding: 0.6rem 10px;
+    transform: translateY(-100%);
     
     &-title {
         font-family: $suicce-thin;
@@ -219,8 +234,8 @@
     }
     &-col {
         display: inline-flex;
-        width: 350px;
-        margin-right: 100px;
+        width: 33%;
+        padding: 0 20px;
         flex-direction: column;
         font-size: 15px;
         label {
@@ -231,7 +246,6 @@
             }
             
         }
-
         &__title {
             font-size: 24px;
             padding-bottom: 30px;
@@ -258,16 +272,10 @@
             left: 0;
             width: 100%;
             height: 120px;
-            padding-left: 80px;
+            padding: 0px 20px;
             background-color: #1B1B1F;        
         }
-        &__input {
-            width: 350px;
-            margin-right: 100px;
-        }
         &__btn {
-            width: 350px;
-            margin-right: 100px;
             padding: 16px 8px;
             text-align: center;
             background-color: transparent;
@@ -279,6 +287,218 @@
 }
 
 
+.projects {
+    position: relative;
+    background: url('../img/parallax-bg.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 1;
+    
+    &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    &-slider {
+        position: relative;
+        z-index: 3;
+        padding: 150px 32px;
+
+        &__title {
+            max-width: 250px;
+            margin-top: 45px;
+            margin-bottom: 30px;
+            color: $white;
+            font-family: $suicce-light;
+            font-size: 2.6rem;
+        }
+
+        &__item {
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .slick-dots{
+            position: absolute;
+            top: 80px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slick-dots li{
+            list-style: none;
+            margin: 0px 10px;
+        }
+        .slick-dots button{
+            font-size: 0;
+            width: 32px;
+            height: 3px;
+            background-color: $grey;
+            border-radius: 8px;
+        }
+        .slick-dots li.slick-active button{
+            height: 6px;
+            background-color: $white;
+        }
+    }
+    .slick-slider{
+        min-width: 0;
+    }
+    .slick-list {
+        overflow: hidden;
+        &:focus {
+            outline: none;
+            border: none;
+        }
+    }
+    .slick-track{
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+.skills {
+    padding: 60px 32px;
+    background-color: $black;
+    color: $white;
+    font-family: $suicce-thin;
+    
+    &-col {
+        position: relative;
+        padding: 35px 0;
+        z-index: 5;
+        &__title {
+            font-size: 40px;
+            letter-spacing: 2px;
+        }
+        &__list {
+            margin: 32px auto;
+            font-family: $suicce-light;
+            font-size: 16px;
+            li {
+                margin: 12px auto;
+            }
+        }
+        &:hover {
+            background:  url('../img/skills-bg.png') center center no-repeat;
+        }
+        &:hover .skill-col__overlay{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, .5);
+            z-index: -1;
+        }
+        
+    }
+}
+
+.works {
+    &-col {
+        position: relative;
+        width: 100%;
+        height: 310px;
+        margin: 0;
+        &:hover {
+            .works-content {
+                opacity: 1;
+            }
+        }
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        object-fit: cover;
+    }
+    &-content {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 50px 32px;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(0, 0, 0, .6);
+        opacity: 0;
+        transition: opacity .6s;
+        &__title {
+            max-width: 200px;
+            margin: 0;
+            margin-right: 10px;
+            font-family: $suicce-light;
+            font-size: 32px;
+            text-transform: uppercase;
+            color: $white;
+            overflow: hidden;
+            text-overflow: crop;
+            vertical-align: top;
+        }
+    }
+}
+
+.blog {
+    padding: 60px 32px;
+    background-color: $black;
+    color: $white;
+    &-col {
+        position: relative;
+        padding-top: 40px;
+        padding-bottom: 70px;
+        border-bottom: 1px solid rgba($grey, .3);
+        font-family: $suicce-light;
+        z-index: 5;
+
+        &:hover {
+            background: url('../img/blog-bg.png')  right 30px no-repeat;
+        }
+        &:hover .blog-col__overlay{
+            background-color: rgba(0, 0, 0, .6);
+        }
+        &__overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        &__title {
+            font-size: 25px;
+            line-height: 1.4;
+        }
+        &__desc {
+            margin-top: 32px;
+            margin-bottom: 24px;
+            font-size: 15px;
+            line-height: 1.6;
+            letter-spacing: 2px;
+        }
+        &__date {
+            font-family: $suicce-reg;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #7E808D;
+            letter-spacing: 2px;
+        }
+    }
+}
 
 
 
@@ -293,23 +513,15 @@
     z-index: 99;
 }
 
-.parallax {
-    position: relative;
-    background: url('../img/parallax-bg.jpg') no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 180px;
-    z-index: 1;
-    
-    &:before {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 2;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.25);
-    }
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    background-color: $black;
+    color: $white;
+    font-family: $suicce-thin;
+    font-size: 18px;
+    letter-spacing: 2px;
 }
