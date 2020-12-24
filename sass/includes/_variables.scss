@@ -9,3 +9,10 @@ $suicce-light: 'Suicce Intl Light', sans-serif;
 $suicce-reg: 'Suicce Intl Regular', sans-serif;
 $suicce-book: 'Suicce Intl Book', sans-serif;
 $future-academic: 'Future Academic', sans-serif;
+$base-size: 10px;
+
+// Font size calculator
+@function calculateRem($size) {
+    $remSize: $size / $base-size;
+    @return #{$remSize}rem;
+  }

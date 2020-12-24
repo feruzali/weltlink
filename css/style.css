@@ -80,6 +80,10 @@ ul {
   padding: 0;
 }
 
+* {
+  font-weight: normal;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -89,7 +93,7 @@ ul {
 
 .section-title {
   margin: 0;
-  font-size: 64px;
+  font-size: 6.4rem;
   letter-spacing: 0.048em;
   font-family: "Suicce Intl Thin", sans-serif;
   color: #FFFFFF;
@@ -99,12 +103,13 @@ ul {
   background-color: #000000;
   font-family: "Suicce Intl Thin", sans-serif;
   color: #FFFFFF;
+  padding-top: 220px;
 }
 
 .main-title {
   margin: 0;
   margin-left: 20px;
-  font-size: 3.2rem;
+  font-size: 3.4rem;
   letter-spacing: 0.6rem;
   line-height: 1.3;
 }
@@ -118,9 +123,16 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: 1rem;
   padding-top: 25px;
-  margin-bottom: 11rem;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0);
+  color: #FFFFFF;
+  backdrop-filter: blur(2px);
 }
 
 .header-menu {
@@ -132,7 +144,7 @@ ul {
   z-index: 100;
   background-color: #000000;
   padding: 0.6rem;
-  padding-top: 50px;
+  padding-top: 65px;
   transform: translateY(-100%);
   letter-spacing: 3px;
 }
@@ -150,7 +162,7 @@ ul {
 }
 
 .header-nav__item {
-  font-size: 25px;
+  font-size: 2.5rem;
   margin-bottom: 35px;
 }
 
@@ -164,9 +176,13 @@ ul {
 .header-contacts__item {
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 1.4rem;
   letter-spacing: 2px;
   margin-bottom: 16px;
+}
+
+.header-contacts__item span {
+  line-height: 1.3;
 }
 
 .header-contacts__icon {
@@ -178,7 +194,7 @@ ul {
   justify-content: space-between;
   margin: 50px auto;
   padding: 8px;
-  font-size: 18px;
+  font-size: 1.8rem;
   letter-spacing: 2px;
 }
 
@@ -221,7 +237,7 @@ ul {
   justify-content: space-between;
   margin: 50px auto;
   padding-left: 18px;
-  font-size: 32px;
+  font-size: 3.2rem;
 }
 
 .contacts-social__item {
@@ -318,7 +334,7 @@ ul {
 .brief-tabs__item {
   margin-right: 50px;
   padding-bottom: 15px;
-  font-size: 24px;
+  font-size: 2.4rem;
   color: #707070;
 }
 
@@ -332,20 +348,20 @@ ul {
   width: 33%;
   padding: 0 20px;
   flex-direction: column;
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 
-.brief-col label {
+.brief-col__item {
   margin-bottom: 30px;
   color: #707070;
 }
 
-.brief-col label input {
+.brief-col__item input {
   margin-right: 16px;
 }
 
 .brief-col__title {
-  font-size: 24px;
+  font-size: 2.4rem;
   padding-bottom: 30px;
 }
 
@@ -478,17 +494,28 @@ ul {
   position: relative;
   padding: 35px 0;
   z-index: 5;
+  background: url("../img/skills-bg.png") center center no-repeat;
+}
+
+.skills-col__overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation: out .5s ease-in-out forwards;
 }
 
 .skills-col__title {
-  font-size: 40px;
+  font-size: 4rem;
   letter-spacing: 0.048em;
 }
 
 .skills-col__list {
   margin: 32px auto;
   font-family: "Suicce Intl Light", sans-serif;
-  font-size: 16px;
+  font-size: 1.6rem;
   letter-spacing: 0.048em;
 }
 
@@ -496,19 +523,12 @@ ul {
   margin: 17px auto;
 }
 
-.skills-col:hover {
-  background: url("../img/skills-bg.png") center center no-repeat;
-  transition: all .5s;
+.skills-col:hover .skills-col__overlay {
+  animation: in .9s ease-in-out forwards;
 }
 
-.skills-col:hover .skill-col__overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: -1;
+.works {
+  background-color: #000000;
 }
 
 .works-col {
@@ -551,7 +571,7 @@ ul {
   margin: 0;
   margin-right: 10px;
   font-family: "Suicce Intl Light", sans-serif;
-  font-size: 32px;
+  font-size: 3.2rem;
   letter-spacing: 0.048em;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -573,15 +593,7 @@ ul {
   border-bottom: 1px solid rgba(112, 112, 112, 0.3);
   font-family: "Suicce Intl Light", sans-serif;
   z-index: 5;
-}
-
-.blog-col:hover {
   background: url("../img/blog-bg.png") right 30px no-repeat;
-  transition: all .5s;
-}
-
-.blog-col:hover .blog-col__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .blog-col__overlay {
@@ -591,10 +603,15 @@ ul {
   top: 0;
   left: 0;
   z-index: -1;
+  animation: out .5s ease-in-out forwards;
+}
+
+.blog-col:hover .blog-col__overlay {
+  animation: in .9s ease-in-out forwards;
 }
 
 .blog-col__title {
-  font-size: 25px;
+  font-size: 2.5rem;
   line-height: 1.4;
   letter-spacing: 0.048em;
 }
@@ -602,17 +619,35 @@ ul {
 .blog-col__desc {
   margin-top: 32px;
   margin-bottom: 24px;
-  font-size: 15px;
+  font-size: 1.5rem;
   line-height: 1.6;
   letter-spacing: 0.048em;
 }
 
 .blog-col__date {
   font-family: "Suicce Intl Regular", sans-serif;
-  font-size: 12px;
+  font-size: 1.2rem;
   text-transform: uppercase;
   color: #7E808D;
   letter-spacing: 0.256em;
+}
+
+@keyframes in {
+  from {
+    background-color: black;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+@keyframes out {
+  from {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  to {
+    background-color: black;
+  }
 }
 
 .bottom-blur {
@@ -636,8 +671,61 @@ ul {
   background-color: #000000;
   color: #FFFFFF;
   font-family: "Suicce Intl Thin", sans-serif;
-  font-size: 18px;
+  font-size: 1.8rem;
   letter-spacing: 2px;
+}
+
+input[type="radio"]:checked,
+input[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type="radio"]:checked + label,
+input[type="radio"]:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label:before,
+input[type="radio"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #707070;
+  border-radius: 4px;
+  background-color: #707070;
+}
+
+input[type="radio"]:checked + label:after,
+input[type="radio"]:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  transition: all 0.2s ease;
+}
+
+input[type="radio"]:checked + label:after,
+input[type="radio"]:not(:checked) + label:after {
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background-color: #5A6BEF;
+  border-radius: 4px;
+}
+
+input[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+}
+
+input[type="radio"]:checked + label:after {
+  opacity: 1;
 }
 
 .visible-lg, .visible-md, .visible-sm {
@@ -645,9 +733,6 @@ ul {
 }
 
 @media (min-width: 576px) {
-  html {
-    font-size: 12px;
-  }
   .container {
     max-width: 540px;
   }
@@ -664,6 +749,9 @@ ul {
   .visible-sm {
     display: block;
   }
+  .main-title {
+    font-size: 4.8rem;
+  }
   .works {
     display: flex;
     flex-wrap: wrap;
@@ -675,17 +763,12 @@ ul {
     justify-content: space-around;
   }
   .blog-col {
-    margin-top: 20px;
-  }
-  .blog-col:hover {
     background-position: center center;
+    margin-top: 20px;
   }
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 14px;
-  }
   .container {
     max-width: 720px;
   }
@@ -696,7 +779,7 @@ ul {
     display: block;
   }
   .projects-slider__title {
-    max-width: 400px;
+    max-width: 350px;
   }
   .projects-slider .slick-dots button {
     width: 50px;
@@ -710,14 +793,10 @@ ul {
   }
   .skills-col {
     width: 50%;
-    margin: 0 auto;
   }
 }
 
 @media (min-width: 992px) {
-  html {
-    font-size: 16px;
-  }
   .hidden-lg {
     display: none;
   }
@@ -743,13 +822,19 @@ ul {
   }
   .header-nav__item {
     font-family: "Suicce Intl Regular", sans-serif;
-    font-size: 14px;
+    font-size: 1.4rem;
     letter-spacing: 4px;
     margin-bottom: 0;
     margin-right: 30px;
   }
+  .main {
+    padding-top: 270px;
+  }
   .main-title, .main-arrow {
     margin-left: 80px;
+  }
+  .main-title {
+    font-size: 6.4rem;
   }
   .contacts {
     height: 100vh;
@@ -793,7 +878,7 @@ ul {
     padding: 80px 10px 80px 0;
   }
   .skills-col__list {
-    font-size: 18px;
+    font-size: 1.8rem;
   }
   .blog {
     position: relative;
@@ -809,33 +894,31 @@ ul {
     top: 100px;
     right: 80px;
     font-family: "Suicce Intl Light", sans-serif;
-    font-size: 20px;
+    font-size: 2rem;
   }
   .blog-col {
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
     min-height: 380px;
+    background-position: 45% top;
   }
   .blog-col__title {
     max-width: 30%;
     font-family: "Suicce Intl Regular", sans-serif;
-    font-size: 32px;
+    font-size: 3.2rem;
   }
   .blog-col__desc {
-    font-size: 18px;
+    font-size: 1.8rem;
   }
   .blog-col__date {
-    font-size: 15px;
+    font-size: 1.5rem;
   }
   .blog-col__content {
     max-width: 40%;
   }
   .blog-col__link {
     align-self: center;
-  }
-  .blog-col:hover {
-    background-position: 45% top;
   }
   .footer {
     padding-top: 90px;
@@ -854,7 +937,7 @@ ul {
     width: 25%;
   }
   .header-nav__item {
-    font-size: 16px;
+    font-size: 1.6rem;
     letter-spacing: 6px;
   }
 }

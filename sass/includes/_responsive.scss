@@ -3,9 +3,7 @@
 }
 
 @media (min-width: 576px) {
-	html {
-		font-size: 12px;
-	}
+	$base-size: 12px;
 
 	.container {
 		max-width: 540px;
@@ -25,6 +23,11 @@
 	.visible-sm {
 		display: block;
 	}
+	.main {
+		&-title {
+			font-size: calculateRem(48px);
+		}
+	}
 
 	.works {
 		display: flex;
@@ -39,18 +42,14 @@
 	
 	.blog {
 		&-col {
+			background-position: center center;
 			margin-top: 20px;
-			&:hover {
-				background-position: center center;
-			}
 		}
 	}
 }
 
 @media (min-width: 768px) {
-	html {
-		font-size: 14px;
-	}
+	$base-size: 14px;
 
 	.container {
 		max-width: 720px;
@@ -66,7 +65,7 @@
 	.projects {
 		&-slider {
 			&__title {
-				max-width: 400px;
+				max-width: 350px;
 			}
 			.slick-dots button{
 				width: 50px;
@@ -86,14 +85,11 @@
 
 	.skills-col {
 		width: 50%;
-		margin: 0 auto;
 	}
 }
 
 @media (min-width: 992px) {
-	html {
-		font-size: 16px;
-	}
+	$base-size: 16px;
 
 	.hidden-lg {
 		display: none;
@@ -123,7 +119,7 @@
 			}
 			&__item {
 				font-family: $suicce-reg;
-				font-size: 14px;
+				font-size: calculateRem(14px);
 				letter-spacing: 4px;
 				margin-bottom: 0;
 				margin-right: 30px;
@@ -131,8 +127,12 @@
 		}
 	}
 	.main {
+		padding-top: 270px;
 		&-title, &-arrow {
 			margin-left: 80px;
+		}
+		&-title {
+			font-size: calculateRem(64px);
 		}
 	}
 	.contacts {
@@ -181,7 +181,7 @@
 			margin: 0;
 			padding: 80px 10px 80px 0;
 			&__list {
-				font-size: 18px;
+				font-size: calculateRem(18px);
 			}
 		}
 	}
@@ -198,32 +198,30 @@
 			top: 100px;
 			right: 80px;
 			font-family: $suicce-light;
-			font-size: 20px;
+			font-size: calculateRem(20px);
 		}
 		&-col {
 			margin-top: 40px;
 			display: flex;
 			justify-content: space-between;
 			min-height: 380px;
+			background-position: 45% top;
 			&__title {
 				max-width: 30%;
 				font-family: $suicce-reg;
-				font-size: 32px;
+				font-size: calculateRem(32px);
 			}
 			&__desc {
-				font-size: 18px;
+				font-size: calculateRem(18px);
 			}
 			&__date {
-				font-size: 15px;
+				font-size: calculateRem(15px);
 			}
 			&__content {
 				max-width: 40%;
 			}
 			&__link {
 				align-self: center;
-			}
-			&:hover {
-				background-position: 45% top;
 			}
 		}
 	}
@@ -247,7 +245,7 @@
 		}
 		&-nav {
 			&__item {
-				font-size: 16px;
+				font-size: calculateRem(16px);
 				letter-spacing: 6px;
 			}
 		}
